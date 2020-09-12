@@ -1,81 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-		<meta charset="utf-8">
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#5481a0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="author" content="Leo Yi">
 <title>Vision Board | Leo Yi</title>
 <link rel="stylesheet" href="https://static.neris-assets.com/css/main-core.css?id=5ae843cebb2eb9ab0429">
 <link rel="stylesheet" href="https://www.16personalities.com/css/fonts.css">
-
-
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:400,400i,600,600i,700&subset=cyrillic,latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="https://www.16personalities.com/css/font-awesome.min.css">
 <style>
-	body{
-		margin-top:-80px
-	}
-#cover{
-	width:100vw;
-	height:200px;
-	background:#ffffff;
-	position:absolute;
-	z-index:9999;
-	margin-top:960px;
-	text-align: center
-	}	
-	@media screen and (max-width: 1640px){
-		#cover{margin-top:1000px}
-	}
-	@media screen and (max-width: 1600px){
-		#cover{margin-top:950px}
-	}
-	@media screen and (max-width: 1210px){
-		#cover{margin-top:990px}
-	}
-	@media screen and (max-width: 1200px){
-		#cover{margin-top:920px}
-	}
-	@media screen and (max-width: 1073px){
-		#cover{margin-top:940px}
-	}
-	@media screen and (max-width: 991px){
-		#cover{margin-top:1500px}
-	}
-	@media screen and (max-width: 602px){
-		#cover{margin-top:1550px}
-	}
-	@media screen and (max-width: 466px){
-		#cover{margin-top:1600px}
-	}
-	@media screen and (max-width: 459px){
-		#cover{margin-top:1400px}
-	}
-	@media screen and (max-width: 361px){
-		#cover{margin-top:1440px}
-	}
-	button{
-		margin-top:50px;
-		border-radius:50px;
-		background-color:#4C8BF5;
-		border:0;
-		height:40px;
-		width:200px;
-		color:white
-	}
-		</style>
-    </head>
+body {
+    margin-top: -80px
+}
+* {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+#cover {
+    width: 100vw;
+    height: 200px;
+    background: #ffffff;
+    position: absolute;
+    z-index: 9999;
+    margin-top: 960px;
+    text-align: center
+}
 
-    <body role="document" class="">
-    <div class="main-wrapper" id="main-app">
-        <main class="q-td explorer virtuoso">
+@media screen and (max-width: 1640px) {
+#cover {
+    margin-top: 1000px
+}
+}
 
-                            <div 
+@media screen and (max-width: 1600px) {
+#cover {
+    margin-top: 950px
+}
+}
+
+@media screen and (max-width: 1210px) {
+#cover {
+    margin-top: 990px
+}
+}
+
+@media screen and (max-width: 1200px) {
+#cover {
+    margin-top: 920px
+}
+}
+
+@media screen and (max-width: 1073px) {
+#cover {
+    margin-top: 940px
+}
+}
+
+@media screen and (max-width: 991px) {
+#cover {
+    margin-top: 1500px
+}
+}
+
+@media screen and (max-width: 602px) {
+#cover {
+    margin-top: 1550px
+}
+}
+
+@media screen and (max-width: 466px) {
+#cover {
+    margin-top: 1600px
+}
+}
+
+@media screen and (max-width: 459px) {
+#cover {
+    margin-top: 1400px
+}
+}
+
+@media screen and (max-width: 361px) {
+#cover {
+    margin-top: 1440px
+}
+}
+button {
+    margin-top: 50px;
+    border-radius: 50px;
+    background-color: #4C8BF5;
+    border: 0;
+    height: 40px;
+    width: 200px;
+    color: white
+}
+</style>
+</head>
+<body>
+<div class="main-wrapper" id="main-app">
+<main class="q-td explorer virtuoso">
+<div 
     data-chunk="quiz-chunk"
     dusk="quiz-results">
-
-<transition name="slide">
-
+  <transition name="slide">
     <quiz-results 
         v-if="!startedReadingTypeDescription"
         v-bind:logged-in="false"
@@ -84,103 +115,73 @@
         variant="assertive"
         endpoint="https://www.16personalities.com/users/update-type"
         :scores="[
-            52,
-            2,
-            25,
-            8,
-            5
+        52,
+        2,
+        25,
+        8,
+        5
         ]"
-    >
-
-        <div class="type-info">
-
-            <div class="caption">Leo Yi's personality type is: </div>
-            <div class="type-name">Virtuoso</div>
-            <div class="type-code">ISTP-a</div>
-
-            <img src="https://static.neris-assets.com/images/personality-types/avatars/istp-virtuoso.svg">
-
+        >
+      <div class="type-info">
+        <div class="caption">Leo Yi's personality type is: </div>
+        <div class="type-name">Virtuoso</div>
+        <div class="type-code">ISTP-a</div>
+        <img src="https://static.neris-assets.com/images/personality-types/avatars/istp-virtuoso.svg"> </div>
+      <div class="trait-scales comp" data-chunk="ui-chunk">
+        <div class="trait mind">
+          <div class="caption">Mind</div>
+          <div class="tagline">This trait determines how we interact with our environment.</div>
+          <app-pct-bar 
+              :score="52" 
+              :reversed="true"
+              :titles="['Extraverted','Introverted']"
+              ></app-pct-bar>
         </div>
-
-        <div class="trait-scales comp" data-chunk="ui-chunk">
-
-            <div class="trait mind">
-
-                <div class="caption">Mind</div>
-                <div class="tagline">This trait determines how we interact with our environment.</div>
-
-                <app-pct-bar 
-                    :score="52" 
-                    :reversed="true"
-                    :titles="['Extraverted','Introverted']"
-                ></app-pct-bar>
-
-            </div>
-
-            <div class="trait energy">
-
-                <div class="caption">Energy</div>
-                <div class="tagline">This trait shows where we direct our mental energy.</div>
-
-                <app-pct-bar 
-                    :score="2" 
-                    :reversed="true"
-                    :titles="['Intuitive','Observant']"
-                ></app-pct-bar>
-
-            </div>
-
-            <div class="trait nature">
-
-                <div class="caption">Nature</div>
-                <div class="tagline">This trait determines how we make decisions and cope with emotions.</div>
-
-                <app-pct-bar 
-                    :score="25" 
-                    :reversed="false"
-                    :titles="['Thinking','Feeling']"
-                ></app-pct-bar>
-
-            </div>
-
-            <div class="trait tactics">
-
-                <div class="caption">Tactics</div>
-                <div class="tagline">This trait reflects our approach to work, planning and decision-making.</div>
-
-                <app-pct-bar 
-                    :score="8" 
-                    :reversed="true"
-                    :titles="['Judging','Prospecting']"
-                ></app-pct-bar>
-
-            </div>
-
-            <div class="trait identity">
-
-                <div class="caption">Identity</div>
-                <div class="tagline">This trait underpins all others, showing how confident we are in our abilities and decisions.</div>
-
-                <app-pct-bar 
-                    :score="5" 
-                    :reversed="false"
-                    :titles="['Assertive','Turbulent']"
-                ></app-pct-bar>
-
-            </div>
-
+        <div class="trait energy">
+          <div class="caption">Energy</div>
+          <div class="tagline">This trait shows where we direct our mental energy.</div>
+          <app-pct-bar 
+              :score="2" 
+              :reversed="true"
+              :titles="['Intuitive','Observant']"
+              ></app-pct-bar>
         </div>
-
+        <div class="trait nature">
+          <div class="caption">Nature</div>
+          <div class="tagline">This trait determines how we make decisions and cope with emotions.</div>
+          <app-pct-bar 
+              :score="25" 
+              :reversed="false"
+              :titles="['Thinking','Feeling']"
+              ></app-pct-bar>
+        </div>
+        <div class="trait tactics">
+          <div class="caption">Tactics</div>
+          <div class="tagline">This trait reflects our approach to work, planning and decision-making.</div>
+          <app-pct-bar 
+              :score="8" 
+              :reversed="true"
+              :titles="['Judging','Prospecting']"
+              ></app-pct-bar>
+        </div>
+        <div class="trait identity">
+          <div class="caption">Identity</div>
+          <div class="tagline">This trait underpins all others, showing how confident we are in our abilities and decisions.</div>
+          <app-pct-bar 
+              :score="5" 
+              :reversed="false"
+              :titles="['Assertive','Turbulent']"
+              ></app-pct-bar>
+        </div>
+      </div>
     </quiz-results>
-
-</transition>
-
+  </transition>
 </div>
 <div id="cover">
-	<button onclick="location.href='more.html'">Read more</button>
-	</div>
-<script src="https://static.neris-assets.com/js/manifest.js?id=c88a9cb52625380e9c39"></script>
-<script src="https://static.neris-assets.com/js/vendor.js?id=81e8d70f6ba92a94bd48"></script>
+  <button onclick="location.href='more.html'">Read more</button>
+</div>
+<script src="https://static.neris-assets.com/js/manifest.js?id=c88a9cb52625380e9c39"></script> 
+<script src="https://static.neris-assets.com/js/vendor.js?id=81e8d70f6ba92a94bd48"></script> 
 <script src="https://static.neris-assets.com/js/app.js?id=49ba8738f9e34d0b345f"></script>
-    </body>
+</body>
 </html>
